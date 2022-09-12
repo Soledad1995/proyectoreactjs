@@ -1,20 +1,23 @@
 import React from "react";
 import logo from "../../assets/logomiosinfondo.png"
-import "./header.css"
+import "./Header.css"
+import CarWidget from "../Cartidget/CarWidget";
 
+const categorias = [
+    {id:0, nombre:'Vinilos'},
+    {id:1, nombre:'Carteleria'},
+    {id:2, nombre:'Letras Corporeas'},
+]
 
-const Header = () =>{
+const Navbar = () =>{
     return(
-        <header style={style.container}>
+        <Header style={style.container}>
             <img style={style.imagen} src={logo} alt="logo"></img>
             <h1> Titulo </h1>
-            <nav>
-                <a style={style.links} href="vinilos.html"> Vinilos</a>
-                <a style={style.links} href="carteleria.html">Carteleria</a>
-                <a style={style.links} href="letras.html">Letras Corporeas</a>
-            </nav>
+            <nav categorias = {categorias}/>
+            <CarWidget />
             
-        </header>
+        </Header>
     
     )
 }
@@ -34,4 +37,4 @@ const style = {
 
 
 
-export default Header
+export default Navbar
