@@ -15,7 +15,7 @@ export const ItemListContainer = ({ texto })=> {
 const [data, setData ] = useState ([ ]); 
 
 useEffect (() => {
-    const getData = nwe Promise (resolve =>{
+    const getData = new Promise (resolve =>{
         setTimeout(() => {
             resolve (films); 
 
